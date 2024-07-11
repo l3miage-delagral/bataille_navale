@@ -1,0 +1,8 @@
+COMPO GAME
+
+<section *ngIf="obsState | async as S">
+  {{ S | json }}
+  <div *ngFor="let index; of">
+    {{ index }}
+  </div>
+</section>

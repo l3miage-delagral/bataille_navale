@@ -1,0 +1,53 @@
+$W: 16px;
+$shot: 8px;
+$delta: 0.5 * ($W - $shot);
+
+table {
+  border-collapse: collapse;
+
+  tr > td:nth-child(1) {
+    border: none;
+    text-align: right;
+  }
+
+  tr:nth-child(1) > td {
+    border: none;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  td {
+    width: $W;
+    height: $W;
+    border: solid black 1px;
+
+    &.water {
+      background-color: aquamarine;
+    }
+
+    &.boat {
+      background-color: grey;
+    }
+
+    &.canShoot:hover {
+      > div {
+        width : $shot;
+        height: $shot;
+        border: solid black 1px;
+      }
+    }
+
+    > div {
+      width : $shot;
+      height: $shot;
+      border-radius: 50%;
+      margin-left: $delta;
+
+      &.shot {
+        border: solid black 1px;
+        background-color: red;
+      }
+    }
+  }
+
+}
